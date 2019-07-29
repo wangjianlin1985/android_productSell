@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="ProductInfo" table="ProductInfo">
+
+          <!-- 主键产品条形码 -->
+          <id name="barCode" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 多对一属性: 所属类别 -->
+          <many-to-one name="classId"
+            column="classId"
+            class="ProductClass"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 产品名称 -->
+          <property
+            name="productName"
+            column="productName"
+            type="string"
+            length="40"
+          />
+
+          <!-- 简单日期型属性: 生产日期 -->
+          <property
+            name="madeDate"
+            column="madeDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单字符串属性: 备注1 -->
+          <property
+            name="firstBeizhu"
+            column="firstBeizhu"
+            type="string"
+            length="100"
+          />
+
+          <!-- 简单字符串属性: 备注2 -->
+          <property
+            name="secondBeizhu"
+            column="secondBeizhu"
+            type="string"
+            length="100"
+          />
+
+          <!-- 简单字符串属性: 备注3 -->
+          <property
+            name="thirdBeizhu"
+            column="thirdBeizhu"
+            type="string"
+            length="100"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

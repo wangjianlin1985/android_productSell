@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="TownInfo" table="TownInfo">
+
+          <!-- 主键乡镇编号 -->
+          <id name="townId" column="townId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 所在县市 -->
+          <many-to-one name="countyId"
+            column="countyId"
+            class="CountyInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 乡镇名称 -->
+          <property
+            name="townName"
+            column="townName"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
