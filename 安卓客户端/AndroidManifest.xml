@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="CountyInfoListActivity"></activity>
+        <activity android:name="CountyInfoQueryActivity"></activity>
+        <activity android:name="CountyInfoAddActivity"></activity>
+        <activity android:name="CountyInfoEditActivity"></activity>
+        <activity android:name="CountyInfoDetailActivity"></activity>
+        <activity android:name="TownInfoListActivity"></activity>
+        <activity android:name="TownInfoQueryActivity"></activity>
+        <activity android:name="TownInfoAddActivity"></activity>
+        <activity android:name="TownInfoEditActivity"></activity>
+        <activity android:name="TownInfoDetailActivity"></activity>
+        <activity android:name="ProductClassListActivity"></activity>
+        <activity android:name="ProductClassQueryActivity"></activity>
+        <activity android:name="ProductClassAddActivity"></activity>
+        <activity android:name="ProductClassEditActivity"></activity>
+        <activity android:name="ProductClassDetailActivity"></activity>
+        <activity android:name="ProductInfoListActivity"></activity>
+        <activity android:name="ProductInfoQueryActivity"></activity>
+        <activity android:name="ProductInfoAddActivity"></activity>
+        <activity android:name="ProductInfoEditActivity"></activity>
+        <activity android:name="ProductInfoDetailActivity"></activity>
+        <activity android:name="SellPersonListActivity"></activity>
+        <activity android:name="SellPersonQueryActivity"></activity>
+        <activity android:name="SellPersonAddActivity"></activity>
+        <activity android:name="SellPersonEditActivity"></activity>
+        <activity android:name="SellPersonDetailActivity"></activity>
+        <activity android:name="SellInfoListActivity"></activity>
+        <activity android:name="SellInfoQueryActivity"></activity>
+        <activity android:name="SellInfoAddActivity"></activity>
+        <activity android:name="SellInfoEditActivity"></activity>
+        <activity android:name="SellInfoDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>

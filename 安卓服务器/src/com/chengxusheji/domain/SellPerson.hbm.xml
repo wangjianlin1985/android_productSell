@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="SellPerson" table="SellPerson">
+
+          <!-- 主键手机号 -->
+          <id name="telephone" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 简单字符串属性: 登录密码 -->
+          <property
+            name="password"
+            column="password"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 姓名 -->
+          <property
+            name="name"
+            column="name"
+            type="string"
+            length="10"
+          />
+
+          <!-- 多对一属性: 所在县市 -->
+          <many-to-one name="countyId"
+            column="countyId"
+            class="CountyInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 所在乡镇 -->
+          <many-to-one name="townId"
+            column="townId"
+            class="TownInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
